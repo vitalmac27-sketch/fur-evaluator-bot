@@ -96,7 +96,7 @@ const FurCoatEvaluator = () => {
                 <strong>Дефекты:</strong> {formData.hasDefects === "yes" ? "Есть" : "Нет"}
               </p>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <Button onClick={handleReset} variant="outline" className="flex-1" size="lg">
                 Начать заново
               </Button>
