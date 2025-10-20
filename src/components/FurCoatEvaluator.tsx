@@ -96,16 +96,20 @@ const FurCoatEvaluator = () => {
                 <strong>Дефекты:</strong> {formData.hasDefects === "yes" ? "Есть" : "Нет"}
               </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button onClick={handleReset} variant="outline" className="flex-1" size="lg">
-                Начать заново
-              </Button>
-              {eligible && (
-                <Button onClick={handleWhatsApp} className="flex-1" size="lg">
+            {eligible ? (
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button onClick={handleReset} variant="outline" className="w-full" size="lg">
+                  Начать заново
+                </Button>
+                <Button onClick={handleWhatsApp} className="w-full" size="lg">
                   Связаться в WhatsApp
                 </Button>
-              )}
-            </div>
+              </div>
+            ) : (
+              <Button onClick={handleReset} variant="outline" className="w-full" size="lg">
+                Начать заново
+              </Button>
+            )}
           </CardContent>
         </Card>
       );
