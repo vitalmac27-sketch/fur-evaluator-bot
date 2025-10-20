@@ -58,7 +58,7 @@ const FurCoatEvaluator = () => {
     const message = encodeURIComponent(
       `Здравствуйте! Я хочу продать норковую шубу:\n\nВозраст: ${formData.age === "0-3" ? "от 0 до 3 лет" : formData.age === "4-10" ? "от 4 до 10 лет" : "от 10 и более"}\nРазмер: ${formData.size}\nДефекты: ${formData.hasDefects === "yes" ? "Да" : "Нет"}`
     );
-    window.open(`https://wa.me/89179153858?text=${message}`, "_blank");
+    window.open(`https://wa.me/+79179153858?text=${message}`, "_blank");
   };
 
   const renderStep = () => {
@@ -75,11 +75,11 @@ const FurCoatEvaluator = () => {
               )}
             </div>
             <CardTitle className="text-2xl">
-              {eligible ? "Отлично! Мы готовы выкупить вашу шубу" : "К сожалению, ваша шуба не подходит"}
+              {eligible ? "Отлично!" : "К сожалению, ваша шуба не подходит"}
             </CardTitle>
             <CardDescription className="text-lg mt-2">
               {eligible
-                ? "Свяжитесь с нами в WhatsApp для оформления выкупа"
+                ? "Свяжитесь с нами в WhatsApp для получения оценки."
                 : "Мы выкупаем шубы до 3 лет, размеры от 48-50 и без дефектов"}
             </CardDescription>
           </CardHeader>
@@ -97,14 +97,14 @@ const FurCoatEvaluator = () => {
               </p>
             </div>
             <div className="flex gap-3">
+              <Button onClick={handleReset} variant="outline" className="flex-1" size="lg">
+                Начать заново
+              </Button>
               {eligible && (
                 <Button onClick={handleWhatsApp} className="flex-1" size="lg">
                   Связаться в WhatsApp
                 </Button>
               )}
-              <Button onClick={handleReset} variant="outline" className="flex-1" size="lg">
-                Начать заново
-              </Button>
             </div>
           </CardContent>
         </Card>
