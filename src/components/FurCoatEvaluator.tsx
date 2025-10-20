@@ -107,7 +107,7 @@ const FurCoatEvaluator = () => {
                 <Button onClick={handleReset} variant="outline" className="w-full" size="lg">
                   Начать заново
                 </Button>
-                <Button onClick={handleWhatsApp} className="w-full gradient-primary shadow-glow animate-pulse-glow hover:scale-105 transition-transform" size="lg">
+                <Button onClick={handleWhatsApp} className="w-full gradient-primary hover:scale-105 transition-transform" size="lg">
                   Связаться в WhatsApp
                 </Button>
               </div>
@@ -150,19 +150,19 @@ const FurCoatEvaluator = () => {
         <CardContent className="space-y-6">
           {step === 1 && (
             <RadioGroup value={formData.age} onValueChange={(value) => setFormData({ ...formData, age: value })} className="space-y-3">
-              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "0-3" ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`}>
+              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "0-3" ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`}>
                 <RadioGroupItem value="0-3" id="age-0-3" />
                 <Label htmlFor="age-0-3" className="flex-1 cursor-pointer font-medium">
                   от 0 до 3 лет
                 </Label>
               </div>
-              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "4-10" ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.1s" }}>
+              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "4-10" ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.1s" }}>
                 <RadioGroupItem value="4-10" id="age-4-10" />
                 <Label htmlFor="age-4-10" className="flex-1 cursor-pointer font-medium">
                   от 4 до 10 лет
                 </Label>
               </div>
-              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "10+" ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.2s" }}>
+              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.age === "10+" ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.2s" }}>
                 <RadioGroupItem value="10+" id="age-10+" />
                 <Label htmlFor="age-10+" className="flex-1 cursor-pointer font-medium">
                   от 10 и более
@@ -176,7 +176,7 @@ const FurCoatEvaluator = () => {
               {["38-42", "42-46", "46-48", "48-50", "50-52", "52-54", "54+"].map((size, index) => (
                 <div
                   key={size}
-                  className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.size === size ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`}
+                  className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.size === size ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <RadioGroupItem value={size} id={`size-${size}`} />
@@ -194,13 +194,13 @@ const FurCoatEvaluator = () => {
               onValueChange={(value) => setFormData({ ...formData, hasDefects: value })}
               className="space-y-3"
             >
-              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.hasDefects === "no" ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`}>
+              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.hasDefects === "no" ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`}>
                 <RadioGroupItem value="no" id="defects-no" />
                 <Label htmlFor="defects-no" className="flex-1 cursor-pointer font-medium">
                   Нет дефектов
                 </Label>
               </div>
-              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.hasDefects === "yes" ? "border-primary bg-primary/10 shadow-glow" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.1s" }}>
+              <div className={`flex items-center space-x-3 p-4 rounded-lg border-2 cursor-pointer transition-all animate-slide-in ${formData.hasDefects === "yes" ? "border-primary bg-primary/10" : "border-border hover:border-primary/50"}`} style={{ animationDelay: "0.1s" }}>
                 <RadioGroupItem value="yes" id="defects-yes" />
                 <Label htmlFor="defects-yes" className="flex-1 cursor-pointer font-medium">
                   Есть дефекты (потертости, следы от моли, дырки)
@@ -222,7 +222,7 @@ const FurCoatEvaluator = () => {
                 (step === 2 && !formData.size) ||
                 (step === 3 && !formData.hasDefects)
               }
-              className="flex-1 gradient-primary shadow-glow disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 gradient-primary disabled:opacity-50 disabled:cursor-not-allowed"
               size="lg"
             >
               {step === 3 ? "Узнать результат" : "Далее"}
