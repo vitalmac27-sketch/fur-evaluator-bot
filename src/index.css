@@ -19,6 +19,7 @@ All colors MUST be HSL.
 
     --primary: 142 76% 36%;
     --primary-foreground: 0 0% 98%;
+    --primary-glow: 142 76% 46%;
 
     --secondary: 0 0% 30%;
     --secondary-foreground: 0 0% 98%;
@@ -37,6 +38,11 @@ All colors MUST be HSL.
     --ring: 142 76% 36%;
 
     --radius: 0.75rem;
+    
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 20%), hsl(0 0% 22%));
+    --shadow-elegant: 0 10px 30px -10px hsl(142 76% 36% / 0.3);
+    --shadow-glow: 0 0 40px hsl(142 76% 46% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +106,33 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-montserrat;
+  }
+}
+
+@layer utilities {
+  .animate-scale-in {
+    animation: scale-in 0.2s ease-out;
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+  
+  .hover-lift {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
   }
 }
