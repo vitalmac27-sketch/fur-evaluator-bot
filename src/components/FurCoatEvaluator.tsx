@@ -110,7 +110,7 @@ const FurCoatEvaluator = () => {
             </div>
             {eligible ? (
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleBack} variant="outline" className="w-full" size="lg">
+                <Button onClick={handleBack} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Назад
                 </Button>
                 <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
@@ -122,7 +122,7 @@ const FurCoatEvaluator = () => {
               </div>
             ) : (
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleBack} variant="outline" className="w-full" size="lg">
+                <Button onClick={handleBack} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Назад
                 </Button>
                 <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
