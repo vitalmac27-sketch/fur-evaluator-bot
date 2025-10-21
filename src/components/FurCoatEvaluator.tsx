@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
@@ -20,6 +20,15 @@ const FurCoatEvaluator = () => {
     size: "",
     hasDefects: "",
   });
+  const buttonsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (formData.age || formData.size || formData.hasDefects) {
+      setTimeout(() => {
+        buttonsRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      }, 100);
+    }
+  }, [formData.age, formData.size, formData.hasDefects]);
 
   const isEligible = () => {
     return (
@@ -104,7 +113,7 @@ const FurCoatEvaluator = () => {
                 <Button onClick={handleBack} variant="outline" className="w-full" size="lg">
                   Назад
                 </Button>
-                <Button onClick={handleReset} variant="outline" className="w-full" size="lg">
+                <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Начать заново
                 </Button>
                 <Button onClick={handleWhatsApp} className="w-full gradient-primary hover:scale-105 transition-transform" size="lg">
@@ -116,7 +125,7 @@ const FurCoatEvaluator = () => {
                 <Button onClick={handleBack} variant="outline" className="w-full" size="lg">
                   Назад
                 </Button>
-                <Button onClick={handleReset} variant="outline" className="w-full" size="lg">
+                <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Начать заново
                 </Button>
               </div>
@@ -209,7 +218,7 @@ const FurCoatEvaluator = () => {
             </RadioGroup>
           )}
 
-          <div className="flex gap-3 pt-4">
+          <div ref={buttonsRef} className="flex gap-3 pt-4">
             {step !== 1 && (
               <Button onClick={handleBack} variant="outline" className="flex-1" size="lg">
                 Назад
