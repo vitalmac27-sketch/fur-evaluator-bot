@@ -110,10 +110,10 @@ const FurCoatEvaluator = () => {
             </div>
             {eligible ? (
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleBack} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
+                <Button onClick={handleBack} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Назад
                 </Button>
-                <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
+                <Button onClick={handleReset} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Начать заново
                 </Button>
                 <Button onClick={handleWhatsApp} className="w-full gradient-primary hover:scale-105 transition-transform" size="lg">
@@ -122,10 +122,10 @@ const FurCoatEvaluator = () => {
               </div>
             ) : (
               <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleBack} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
+                <Button onClick={handleBack} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Назад
                 </Button>
-                <Button onClick={handleReset} className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/80 sm:bg-background sm:text-foreground sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
+                <Button onClick={handleReset} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
                   Начать заново
                 </Button>
               </div>
