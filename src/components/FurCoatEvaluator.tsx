@@ -70,6 +70,14 @@ const FurCoatEvaluator = () => {
     window.open(`https://wa.me/+79179153858?text=${message}`, "_blank");
   };
 
+  const handleMax = () => {
+    window.open("https://max.ru/u/f9LHodD0cOJhOo9RkiGtlbouWLdIia3QK7mTBFMCQ8l2U4EfKpF4ehl9OSs", "_blank");
+  };
+
+  const handleTelegram = () => {
+    window.open("https://t.me/elmiradarina", "_blank");
+  };
+
   const renderStep = () => {
     if (step === "result") {
       const eligible = isEligible();
@@ -117,7 +125,13 @@ const FurCoatEvaluator = () => {
                   Начать заново
                 </Button>
                 <Button onClick={handleWhatsApp} className="w-full gradient-primary hover:scale-105 transition-transform" size="lg">
-                  Связаться в WhatsApp
+                  WhatsApp
+                </Button>
+                <Button onClick={handleMax} className="w-full bg-[#0077FF] hover:bg-[#0066DD] text-white hover:scale-105 transition-transform" size="lg">
+                  Max
+                </Button>
+                <Button onClick={handleTelegram} className="w-full bg-[#229ED9] hover:bg-[#1E8BC3] text-white hover:scale-105 transition-transform" size="lg">
+                  Telegram
                 </Button>
               </div>
             ) : (
