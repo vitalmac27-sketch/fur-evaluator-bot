@@ -122,24 +122,24 @@ const FurCoatEvaluator = () => {
                   <p className="text-lg font-medium text-foreground mb-1">Выберите удобный способ связи:</p>
                   <p className="text-sm text-muted-foreground">Ответим в течение 15 минут</p>
                 </div>
-                <div className="flex justify-center gap-4">
+                <div className="flex flex-col gap-3 max-w-sm mx-auto">
                   <Button 
                     onClick={handleWhatsApp} 
-                    className="flex-1 max-w-[140px] gradient-primary hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    className="w-full gradient-primary hover:scale-[1.02] transition-transform h-12 text-base font-medium" 
                     size="lg"
                   >
                     WhatsApp
                   </Button>
                   <Button 
                     onClick={handleMax} 
-                    className="flex-1 max-w-[140px] bg-[#7B5CFA] hover:bg-[#6A4CE8] text-white hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    className="w-full bg-[#7B5CFA] hover:bg-[#6A4CE8] text-white hover:scale-[1.02] transition-transform h-12 text-base font-medium" 
                     size="lg"
                   >
                     Max
                   </Button>
                   <Button 
                     onClick={handleTelegram} 
-                    className="flex-1 max-w-[140px] bg-[#229ED9] hover:bg-[#1E8BC3] text-white hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    className="w-full bg-[#229ED9] hover:bg-[#1E8BC3] text-white hover:scale-[1.02] transition-transform h-12 text-base font-medium" 
                     size="lg"
                   >
                     Telegram
