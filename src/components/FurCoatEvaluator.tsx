@@ -99,11 +99,11 @@ const FurCoatEvaluator = () => {
             </CardTitle>
             <CardDescription className="text-lg mt-2">
               {eligible
-                ? "Свяжитесь с нами в WhatsApp для получения оценки."
+                ? "Мы готовы сделать вам предложение!"
                 : "Мы выкупаем шубы до 3 лет, размеры от 48-50 и без дефектов"}
             </CardDescription>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-6">
             <div className="bg-muted p-4 rounded-lg space-y-2">
               <p>
                 <strong>Возраст шубы:</strong>{" "}
@@ -117,22 +117,42 @@ const FurCoatEvaluator = () => {
               </p>
             </div>
             {eligible ? (
-              <div className="flex flex-col sm:flex-row gap-3">
-                <Button onClick={handleBack} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
-                  Назад
-                </Button>
-                <Button onClick={handleReset} className="w-full bg-muted text-foreground hover:bg-muted/80 sm:bg-background sm:border sm:border-input sm:hover:bg-accent sm:hover:text-accent-foreground" size="lg">
-                  Начать заново
-                </Button>
-                <Button onClick={handleWhatsApp} className="w-full gradient-primary hover:scale-105 transition-transform" size="lg">
-                  WhatsApp
-                </Button>
-                <Button onClick={handleMax} className="w-full bg-[#0077FF] hover:bg-[#0066DD] text-white hover:scale-105 transition-transform" size="lg">
-                  Max
-                </Button>
-                <Button onClick={handleTelegram} className="w-full bg-[#229ED9] hover:bg-[#1E8BC3] text-white hover:scale-105 transition-transform" size="lg">
-                  Telegram
-                </Button>
+              <div className="space-y-4">
+                <div className="text-center">
+                  <p className="text-lg font-medium text-foreground mb-1">Выберите удобный способ связи:</p>
+                  <p className="text-sm text-muted-foreground">Ответим в течение 15 минут</p>
+                </div>
+                <div className="flex justify-center gap-4">
+                  <Button 
+                    onClick={handleWhatsApp} 
+                    className="flex-1 max-w-[140px] gradient-primary hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    size="lg"
+                  >
+                    WhatsApp
+                  </Button>
+                  <Button 
+                    onClick={handleMax} 
+                    className="flex-1 max-w-[140px] bg-[#7B5CFA] hover:bg-[#6A4CE8] text-white hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    size="lg"
+                  >
+                    Max
+                  </Button>
+                  <Button 
+                    onClick={handleTelegram} 
+                    className="flex-1 max-w-[140px] bg-[#229ED9] hover:bg-[#1E8BC3] text-white hover:scale-105 transition-transform h-12 text-base font-medium" 
+                    size="lg"
+                  >
+                    Telegram
+                  </Button>
+                </div>
+                <div className="flex justify-center gap-3 pt-2">
+                  <Button onClick={handleBack} variant="ghost" className="text-muted-foreground hover:text-foreground" size="sm">
+                    ← Назад
+                  </Button>
+                  <Button onClick={handleReset} variant="ghost" className="text-muted-foreground hover:text-foreground" size="sm">
+                    Начать заново
+                  </Button>
+                </div>
               </div>
             ) : (
               <div className="flex flex-col sm:flex-row gap-3">
