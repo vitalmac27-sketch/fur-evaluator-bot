@@ -136,15 +136,7 @@ const FurCoatEvaluator = () => {
                 </div>
                 <div className="flex flex-col gap-3 max-w-sm mx-auto">
                   <Button 
-                    onClick={handleWhatsApp} 
-                    className="w-full gradient-primary hover:scale-[1.02] transition-transform h-12 text-base font-medium" 
-                    size="lg"
-                  >
-                    <WhatsAppIcon />
-                    WhatsApp
-                  </Button>
-                  <Button 
-                    onClick={handleMax} 
+                    onClick={handleMax}
                     className="w-full bg-[#7B5CFA] hover:bg-[#6A4CE8] text-white hover:scale-[1.02] transition-transform h-12 text-base font-medium" 
                     size="lg"
                   >
